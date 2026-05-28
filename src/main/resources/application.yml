@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: bankingmanagement-api
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/orcl.bbrouter
+    username: scott
+    password: tiger
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 9090
+
+logging:
+  level:
+    com:
+      bankingmanagement: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
+  file:
+    name: logs/bankingmanagement.log
+    path: ./logs
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
