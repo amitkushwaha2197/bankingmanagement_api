@@ -17,6 +17,6 @@ public class ReportingServiceHealth implements HealthIndicator{
     }
 
     private boolean checkReportingServiceHealth() {
-        return true;
+        return false;
     }
 }
